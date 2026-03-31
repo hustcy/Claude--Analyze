@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1400 1080" width="1400" height="1080" font-family="'PingFang SC','Helvetica Neue',Arial,sans-serif">
+
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1117;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1d2e;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="entryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c47ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#4f35c7;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="queryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="toolGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="permGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="svcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#be185d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="storeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="agentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="ideGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#64748b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="uiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrowWhite" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="rgba(255,255,255,0.5)"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10b981"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowPink" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ec4899"/>
+    </marker>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#06b6d4"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Grid dots -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.04)"/>
+  </pattern>
+  <rect width="1400" height="1080" fill="url(#dots)"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- TITLE -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <text x="700" y="42" text-anchor="middle" font-size="22" font-weight="700"
+        fill="white" letter-spacing="3">CLAUDE CODE · 系统架构图</text>
+  <text x="700" y="62" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.4)"
+        letter-spacing="1">Architecture Overview · ~512K LOC · TypeScript + React/Ink + Bun</text>
+  <line x1="100" y1="72" x2="1300" y2="72" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- LAYER 1: ENTRY POINT -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <text x="24" y="106" font-size="10" fill="rgba(255,255,255,0.3)" font-weight="600" letter-spacing="2">LAYER 1  ·  入口层</text>
+
+  <!-- Main entry box -->
+  <rect x="440" y="112" width="520" height="70" rx="10" fill="url(#entryGrad)" filter="url(#shadow)"/>
+  <rect x="440" y="112" width="520" height="70" rx="10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="700" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="white">main.tsx  ·  CLI 入口</text>
+  <text x="700" y="156" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.75)">Commander.js 参数解析</text>
+  <text x="700" y="172" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.5)">并行预取: MDM + Keychain + API 预连 · 懒加载重型模块</text>
+
+  <!-- Parallel prefetch badge -->
+  <rect x="924" y="118" width="30" height="16" rx="3" fill="rgba(108,71,255,0.4)" stroke="rgba(108,71,255,0.6)" stroke-width="1"/>
+  <text x="939" y="130" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.8)">⚡</text>
+
+  <!-- Three mode boxes -->
+  <!-- Interactive REPL -->
+  <rect x="100" y="220" width="300" height="60" rx="8" fill="url(#uiGrad)" filter="url(#shadow)"/>
+  <rect x="100" y="220" width="300" height="60" rx="8" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="250" y="244" text-anchor="middle" font-size="13" font-weight="700" fill="white">🖥  交互式 REPL 模式</text>
+  <text x="250" y="262" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)">launchRepl() → &lt;REPL/&gt; · React/Ink 渲染</text>
+  <text x="250" y="274" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.45)">replLauncher.tsx</text>
+
+  <!-- Non-interactive -->
+  <rect x="550" y="220" width="300" height="60" rx="8" fill="rgba(14,165,233,0.25)" filter="url(#shadow)"/>
+  <rect x="550" y="220" width="300" height="60" rx="8" fill="none" stroke="rgba(14,165,233,0.5)" stroke-width="1"/>
+  <text x="700" y="244" text-anchor="middle" font-size="13" font-weight="700" fill="white">📤  非交互 / --print 模式</text>
+  <text x="700" y="262" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)">structuredIO.ts · JSON/Text 标准输出</text>
+  <text x="700" y="274" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.45)">-p / --output-format</text>
+
+  <!-- SDK Auto -->
+  <rect x="1000" y="220" width="300" height="60" rx="8" fill="rgba(16,185,129,0.25)" filter="url(#shadow)"/>
+  <rect x="1000" y="220" width="300" height="60" rx="8" fill="none" stroke="rgba(16,185,129,0.5)" stroke-width="1"/>
+  <text x="1150" y="244" text-anchor="middle" font-size="13" font-weight="700" fill="white">🤖  SDK / Auto 模式</text>
+  <text x="1150" y="262" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)">QueryEngine.submitMessage()</text>
+  <text x="1150" y="274" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.45)">QueryEngine.ts · 状态化对话管理</text>
+
+  <!-- Arrows: entry → modes -->
+  <line x1="560" y1="182" x2="280" y2="220" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" marker-end="url(#arrowWhite)" stroke-dasharray="5,3"/>
+  <line x1="700" y1="182" x2="700" y2="220" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" marker-end="url(#arrowWhite)" stroke-dasharray="5,3"/>
+  <line x1="840" y1="182" x2="1120" y2="220" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" marker-end="url(#arrowWhite)" stroke-dasharray="5,3"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- LAYER 2: CORE QUERY ENGINE -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <text x="24" y="316" font-size="10" fill="rgba(255,255,255,0.3)" font-weight="600" letter-spacing="2">LAYER 2  ·  核心查询层</text>
+
+  <!-- Query engine main box -->
+  <rect x="300" y="322" width="800" height="90" rx="10" fill="url(#queryGrad)" filter="url(#shadow)"/>
+  <rect x="300" y="322" width="800" height="90" rx="10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="700" y="347" text-anchor="middle" font-size="15" font-weight="700" fill="white">⚙  核心查询引擎  query.ts  ·  ask() 函数</text>
+  <!-- Pipeline steps inside -->
+  <rect x="320" y="356" width="140" height="42" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <text x="390" y="373" text-anchor="middle" font-size="10" font-weight="600" fill="white">消息归一化</text>
+  <text x="390" y="389" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">normalizeMessages()</text>
+
+  <rect x="478" y="356" width="140" height="42" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <text x="548" y="373" text-anchor="middle" font-size="10" font-weight="600" fill="white">流式 API 调用</text>
+  <text x="548" y="389" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">streamMessage()</text>
+
+  <rect x="636" y="356" width="140" height="42" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <text x="706" y="373" text-anchor="middle" font-size="10" font-weight="600" fill="white">工具并行处理</text>
+  <text x="706" y="389" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">parallel tool_use</text>
+
+  <rect x="794" y="356" width="140" height="42" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <text x="864" y="373" text-anchor="middle" font-size="10" font-weight="600" fill="white">上下文压缩</text>
+  <text x="864" y="389" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">autoCompact()</text>
+
+  <rect x="952" y="356" width="126" height="42" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <text x="1015" y="373" text-anchor="middle" font-size="10" font-weight="600" fill="white">Token 计费</text>
+  <text x="1015" y="389" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">cost-tracker.ts</text>
+
+  <!-- Arrows: modes → query engine -->
+  <line x1="250" y1="280" x2="430" y2="322" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arrowBlue)" stroke-dasharray="5,3"/>
+  <line x1="700" y1="280" x2="700" y2="322" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="1150" y1="280" x2="970" y2="322" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arrowBlue)" stroke-dasharray="5,3"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- LAYER 3: API + TOOLS + PERMISSIONS (side by side) -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <text x="24" y="438" font-size="10" fill="rgba(255,255,255,0.3)" font-weight="600" letter-spacing="2">LAYER 3  ·  执行层</text>
+
+  <!-- Anthropic API Box -->
+  <rect x="50" y="445" width="260" height="210" rx="10" fill="rgba(236,72,153,0.12)" filter="url(#shadow)"/>
+  <rect x="50" y="445" width="260" height="210" rx="10" fill="none" stroke="rgba(236,72,153,0.5)" stroke-width="1.5"/>
+  <rect x="50" y="445" width="260" height="32" rx="10" fill="url(#svcGrad)"/>
+  <rect x="50" y="465" width="260" height="12" rx="0" fill="url(#svcGrad)"/>
+  <text x="180" y="466" text-anchor="middle" font-size="12" font-weight="700" fill="white">🌐  Anthropic API 层</text>
+  <text x="180" y="482" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.55)">claude.ts · client.ts</text>
+
+  <rect x="66" y="492" width="228" height="26" rx="5" fill="rgba(255,255,255,0.07)"/>
+  <text x="180" y="510" text-anchor="middle" font-size="10" fill="white">Direct API (ANTHROPIC_API_KEY)</text>
+
+  <rect x="66" y="523" width="228" height="26" rx="5" fill="rgba(255,255,255,0.07)"/>
+  <text x="180" y="541" text-anchor="middle" font-size="10" fill="white">AWS Bedrock (IAM 认证)</text>
+
+  <rect x="66" y="554" width="228" height="26" rx="5" fill="rgba(255,255,255,0.07)"/>
+  <text x="180" y="572" text-anchor="middle" font-size="10" fill="white">GCP Vertex AI (Google Auth)</text>
+
+  <rect x="66" y="585" width="228" height="26" rx="5" fill="rgba(255,255,255,0.07)"/>
+  <text x="180" y="603" text-anchor="middle" font-size="10" fill="white">Azure AI Foundry</text>
+
+  <rect x="66" y="616" width="228" height="26" rx="5" fill="rgba(255,255,255,0.07)"/>
+  <text x="180" y="634" text-anchor="middle" font-size="10" fill="white">Claude.ai OAuth (订阅令牌)</text>
+
+  <!-- Tool System Box -->
+  <rect x="340" y="445" width="400" height="210" rx="10" fill="rgba(16,185,129,0.10)" filter="url(#shadow)"/>
+  <rect x="340" y="445" width="400" height="210" rx="10" fill="none" stroke="rgba(16,185,129,0.5)" stroke-width="1.5"/>
+  <rect x="340" y="445" width="400" height="32" rx="10" fill="url(#toolGrad)"/>
+  <rect x="340" y="465" width="400" height="12" fill="url(#toolGrad)"/>
+  <text x="540" y="466" text-anchor="middle" font-size="12" font-weight="700" fill="white">🔧  工具系统 (40+ Tools)  ·  tools/</text>
+  <text x="540" y="482" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.55)">每个工具: 输入 Schema · 权限检查 · call() · JSX 渲染</text>
+
+  <!-- Tool grid -->
+  <rect x="355" y="490" width="112" height="24" rx="4" fill="rgba(16,185,129,0.25)"/>
+  <text x="411" y="506" text-anchor="middle" font-size="9.5" fill="white">🖊 FileRead/Write/Edit</text>
+
+  <rect x="473" y="490" width="90" height="24" rx="4" fill="rgba(16,185,129,0.25)"/>
+  <text x="518" y="506" text-anchor="middle" font-size="9.5" fill="white">🔍 Glob / Grep</text>
+
+  <rect x="569" y="490" width="80" height="24" rx="4" fill="rgba(16,185,129,0.25)"/>
+  <text x="609" y="506" text-anchor="middle" font-size="9.5" fill="white">💻 BashTool</text>
+
+  <rect x="655" y="490" width="75" height="24" rx="4" fill="rgba(16,185,129,0.25)"/>
+  <text x="693" y="506" text-anchor="middle" font-size="9.5" fill="white">🌏 WebFetch</text>
+
+  <rect x="355" y="519" width="88" height="24" rx="4" fill="rgba(16,185,129,0.2)"/>
+  <text x="399" y="535" text-anchor="middle" font-size="9.5" fill="white">🤖 AgentTool</text>
+
+  <rect x="449" y="519" width="95" height="24" rx="4" fill="rgba(16,185,129,0.2)"/>
+  <text x="497" y="535" text-anchor="middle" font-size="9.5" fill="white">🔌 MCPTool</text>
+
+  <rect x="550" y="519" width="95" height="24" rx="4" fill="rgba(16,185,129,0.2)"/>
+  <text x="598" y="535" text-anchor="middle" font-size="9.5" fill="white">📋 TaskCreate/List</text>
+
+  <rect x="651" y="519" width="78" height="24" rx="4" fill="rgba(16,185,129,0.2)"/>
+  <text x="690" y="535" text-anchor="middle" font-size="9.5" fill="white">🔔 CronTool</text>
+
+  <rect x="355" y="548" width="88" height="24" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="399" y="564" text-anchor="middle" font-size="9.5" fill="white">📝 TodoWriteTool</text>
+
+  <rect x="449" y="548" width="88" height="24" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="493" y="564" text-anchor="middle" font-size="9.5" fill="white">⚙ ConfigTool</text>
+
+  <rect x="543" y="548" width="100" height="24" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="593" y="564" text-anchor="middle" font-size="9.5" fill="white">📊 NotebookEdit</text>
+
+  <rect x="649" y="548" width="80" height="24" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="689" y="564" text-anchor="middle" font-size="9.5" fill="white">💬 AskUser</text>
+
+  <rect x="355" y="577" width="98" height="24" rx="4" fill="rgba(16,185,129,0.1)"/>
+  <text x="404" y="593" text-anchor="middle" font-size="9.5" fill="white">🌿 Worktree</text>
+
+  <rect x="459" y="577" width="88" height="24" rx="4" fill="rgba(16,185,129,0.1)"/>
+  <text x="503" y="593" text-anchor="middle" font-size="9.5" fill="white">📐 PlanMode</text>
+
+  <rect x="553" y="577" width="98" height="24" rx="4" fill="rgba(16,185,129,0.1)"/>
+  <text x="602" y="593" text-anchor="middle" font-size="9.5" fill="white">📨 SendMessage</text>
+
+  <rect x="657" y="577" width="72" height="24" rx="4" fill="rgba(16,185,129,0.1)"/>
+  <text x="693" y="593" text-anchor="middle" font-size="9.5" fill="white">💤 SleepTool</text>
+
+  <text x="540" y="635" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.4)">+ SkillTool · LSPTool · REPLTool · SyntheticOutputTool · TeamCreate/Delete ···</text>
+
+  <!-- Permission System Box -->
+  <rect x="770" y="445" width="290" height="210" rx="10" fill="rgba(245,158,11,0.10)" filter="url(#shadow)"/>
+  <rect x="770" y="445" width="290" height="210" rx="10" fill="none" stroke="rgba(245,158,11,0.5)" stroke-width="1.5"/>
+  <rect x="770" y="445" width="290" height="32" rx="10" fill="url(#permGrad)"/>
+  <rect x="770" y="465" width="290" height="12" fill="url(#permGrad)"/>
+  <text x="915" y="466" text-anchor="middle" font-size="12" font-weight="700" fill="white">🔐  权限系统</text>
+  <text x="915" y="482" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.55)">utils/permissions/ · canUseTool()</text>
+
+  <text x="786" y="503" font-size="10" font-weight="600" fill="rgba(245,158,11,0.9)">权限模式：</text>
+  <rect x="786" y="508" width="62" height="20" rx="4" fill="rgba(245,158,11,0.2)"/>
+  <text x="817" y="522" text-anchor="middle" font-size="9" fill="white">default</text>
+  <rect x="854" y="508" width="72" height="20" rx="4" fill="rgba(245,158,11,0.2)"/>
+  <text x="890" y="522" text-anchor="middle" font-size="9" fill="white">acceptEdits</text>
+  <rect x="932" y="508" width="52" height="20" rx="4" fill="rgba(245,158,11,0.2)"/>
+  <text x="958" y="522" text-anchor="middle" font-size="9" fill="white">bypass</text>
+  <rect x="990" y="508" width="56" height="20" rx="4" fill="rgba(245,158,11,0.2)"/>
+  <text x="1018" y="522" text-anchor="middle" font-size="9" fill="white">plan</text>
+
+  <text x="786" y="545" font-size="10" font-weight="600" fill="rgba(245,158,11,0.9)">规则 DSL (settings.json)：</text>
+  <rect x="786" y="550" width="258" height="20" rx="4" fill="rgba(0,0,0,0.3)"/>
+  <text x="795" y="564" font-size="9.5" fill="#10b981" font-family="monospace">Bash(git *) · Read(*.ts) · Write(/tmp/*)</text>
+
+  <text x="786" y="585" font-size="10" font-weight="600" fill="rgba(245,158,11,0.9)">规则来源：</text>
+  <text x="786" y="600" font-size="9" fill="rgba(255,255,255,0.6)">user / project / local / policy / cli / session</text>
+
+  <text x="786" y="620" font-size="10" font-weight="600" fill="rgba(245,158,11,0.9)">AI 分类器 (auto mode)：</text>
+  <text x="786" y="635" font-size="9" fill="rgba(255,255,255,0.6)">bashClassifier · yoloClassifier · classifierDecision</text>
+
+  <!-- UI/REPL Box -->
+  <rect x="1090" y="445" width="270" height="210" rx="10" fill="rgba(249,115,22,0.12)" filter="url(#shadow)"/>
+  <rect x="1090" y="445" width="270" height="210" rx="10" fill="none" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
+  <rect x="1090" y="445" width="270" height="32" rx="10" fill="url(#uiGrad)"/>
+  <rect x="1090" y="465" width="270" height="12" fill="url(#uiGrad)"/>
+  <text x="1225" y="466" text-anchor="middle" font-size="12" font-weight="700" fill="white">🎨  终端 UI  (REPL.tsx)</text>
+  <text x="1225" y="482" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.55)">React 19 + Ink · ~3000+ 行</text>
+
+  <rect x="1106" y="492" width="238" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <text x="1225" y="506" text-anchor="middle" font-size="9.5" fill="white">消息列表 (Virtual List 性能优化)</text>
+
+  <rect x="1106" y="517" width="238" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <text x="1225" y="531" text-anchor="middle" font-size="9.5" fill="white">权限对话框 · 工具进度显示</text>
+
+  <rect x="1106" y="542" width="238" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <text x="1225" y="556" text-anchor="middle" font-size="9.5" fill="white">Vim Mode (motions/operators/objects)</text>
+
+  <rect x="1106" y="567" width="238" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <text x="1225" y="581" text-anchor="middle" font-size="9.5" fill="white">Token 预算 · 成本追踪 · 搜索高亮</text>
+
+  <rect x="1106" y="592" width="238" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <text x="1225" y="606" text-anchor="middle" font-size="9.5" fill="white">后台任务指示器 · Swarm 协作 UI</text>
+
+  <rect x="1106" y="617" width="238" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <text x="1225" y="631" text-anchor="middle" font-size="9.5" fill="white">React Compiler 自动记忆化优化</text>
+
+  <!-- Arrows: query → layer3 -->
+  <line x1="550" y1="412" x2="200" y2="445" stroke="#ec4899" stroke-width="1.5" marker-end="url(#arrowPink)" stroke-dasharray="5,3"/>
+  <line x1="650" y1="412" x2="540" y2="445" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <line x1="750" y1="412" x2="900" y2="445" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowYellow)"/>
+  <line x1="850" y1="412" x2="1200" y2="445" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrowWhite)" stroke-dasharray="5,3"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- LAYER 4: SERVICES + MULTI-AGENT + STORAGE -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <text x="24" y="674" font-size="10" fill="rgba(255,255,255,0.3)" font-weight="600" letter-spacing="2">LAYER 4  ·  服务 / 代理 / 存储层</text>
+
+  <!-- Services Box -->
+  <rect x="50" y="682" width="360" height="220" rx="10" fill="rgba(236,72,153,0.08)" filter="url(#shadow)"/>
+  <rect x="50" y="682" width="360" height="220" rx="10" fill="none" stroke="rgba(236,72,153,0.4)" stroke-width="1.5"/>
+  <rect x="50" y="682" width="360" height="30" rx="10" fill="rgba(236,72,153,0.4)"/>
+  <rect x="50" y="700" width="360" height="12" fill="rgba(236,72,153,0.4)"/>
+  <text x="230" y="701" text-anchor="middle" font-size="12" font-weight="700" fill="white">⚙  服务层  (services/)</text>
+
+  <rect x="66" y="720" width="155" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="143" y="735" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🔐 OAuth 2.0 PKCE</text>
+  <rect x="227" y="720" width="167" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="311" y="735" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">📊 GrowthBook 特性标志</text>
+
+  <rect x="66" y="747" width="155" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="143" y="762" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🔌 MCP 客户端</text>
+  <rect x="227" y="747" width="167" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="311" y="762" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">📡 OpenTelemetry (懒加载)</text>
+
+  <rect x="66" y="774" width="155" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="143" y="789" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🗜 autoCompact 压缩</text>
+  <rect x="227" y="774" width="167" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="311" y="789" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🧠 extractMemories AI记忆</text>
+
+  <rect x="66" y="801" width="155" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="143" y="816" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🔧 LSP 服务器管理</text>
+  <rect x="227" y="801" width="167" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="311" y="816" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🏢 MDM 远程策略</text>
+
+  <rect x="66" y="828" width="155" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="143" y="843" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🔁 withRetry 退避重试</text>
+  <rect x="227" y="828" width="167" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="311" y="843" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.8)">🧩 Plugin 插件市场</text>
+
+  <text x="66" y="874" font-size="9" fill="rgba(255,255,255,0.35)">Hooks: PreToolUse · PostToolUse · PreCompact · SessionStart · Stop</text>
+  <text x="66" y="888" font-size="9" fill="rgba(255,255,255,0.35)">类型: command · prompt · http · agent</text>
+
+  <!-- Multi-Agent Box -->
+  <rect x="440" y="682" width="480" height="220" rx="10" fill="rgba(6,182,212,0.08)" filter="url(#shadow)"/>
+  <rect x="440" y="682" width="480" height="220" rx="10" fill="none" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+  <rect x="440" y="682" width="480" height="30" rx="10" fill="rgba(6,182,212,0.4)"/>
+  <rect x="440" y="700" width="480" height="12" fill="rgba(6,182,212,0.4)"/>
+  <text x="680" y="701" text-anchor="middle" font-size="12" font-weight="700" fill="white">🤖  多代理 Swarm 架构</text>
+
+  <!-- Leader agent -->
+  <rect x="576" y="720" width="208" height="36" rx="6" fill="rgba(6,182,212,0.3)" stroke="rgba(6,182,212,0.6)" stroke-width="1.5"/>
+  <text x="680" y="739" text-anchor="middle" font-size="11" font-weight="700" fill="white">👑 主代理 (Leader Agent)</text>
+  <text x="680" y="752" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">QueryEngine · 权限管理 · 任务分发</text>
+
+  <!-- Arrows down from leader -->
+  <line x1="620" y1="756" x2="530" y2="785" stroke="rgba(6,182,212,0.6)" stroke-width="1.2" marker-end="url(#arrowCyan)"/>
+  <line x1="680" y1="756" x2="680" y2="785" stroke="rgba(6,182,212,0.6)" stroke-width="1.2" marker-end="url(#arrowCyan)"/>
+  <line x1="740" y1="756" x2="830" y2="785" stroke="rgba(6,182,212,0.6)" stroke-width="1.2" marker-end="url(#arrowCyan)"/>
+
+  <!-- Sub agents -->
+  <rect x="456" y="788" width="144" height="52" rx="6" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+  <text x="528" y="808" text-anchor="middle" font-size="10" font-weight="600" fill="white">进程内 Teammate</text>
+  <text x="528" y="822" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">InProcessTeammateTask</text>
+  <text x="528" y="835" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">共享 prompt cache</text>
+
+  <rect x="608" y="788" width="144" height="52" rx="6" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+  <text x="680" y="808" text-anchor="middle" font-size="10" font-weight="600" fill="white">子代理 SubAgent</text>
+  <text x="680" y="822" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">AgentTool · forkSubagent</text>
+  <text x="680" y="835" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">隔离上下文</text>
+
+  <rect x="760" y="788" width="144" height="52" rx="6" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+  <text x="832" y="808" text-anchor="middle" font-size="10" font-weight="600" fill="white">远程代理</text>
+  <text x="832" y="822" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">RemoteAgentTask</text>
+  <text x="832" y="835" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">远程基础设施</text>
+
+  <!-- Coordination features -->
+  <rect x="456" y="848" width="140" height="22" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <text x="526" y="863" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.7)">🔒 权限桥接同步</text>
+  <rect x="602" y="848" width="140" height="22" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <text x="672" y="863" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.7)">🧠 Team Memory 共享</text>
+  <rect x="748" y="848" width="140" height="22" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <text x="818" y="863" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.7)">🔮 推测引擎预执行</text>
+
+  <text x="460" y="890" font-size="9" fill="rgba(255,255,255,0.35)">Coordinator Mode · 工作池管理 · permissionSync.ts · leaderPermissionBridge.ts</text>
+
+  <!-- Storage Box -->
+  <rect x="950" y="682" width="410" height="220" rx="10" fill="rgba(139,92,246,0.08)" filter="url(#shadow)"/>
+  <rect x="950" y="682" width="410" height="220" rx="10" fill="none" stroke="rgba(139,92,246,0.4)" stroke-width="1.5"/>
+  <rect x="950" y="682" width="410" height="30" rx="10" fill="rgba(139,92,246,0.4)"/>
+  <rect x="950" y="700" width="410" height="12" fill="rgba(139,92,246,0.4)"/>
+  <text x="1155" y="701" text-anchor="middle" font-size="12" font-weight="700" fill="white">💾  文件存储层 (无数据库)</text>
+
+  <rect x="966" y="722" width="378" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="975" y="737" font-size="9.5" fill="rgba(255,255,255,0.7)">📄  ~/.claude/config.json  —  全局配置 (OAuth 令牌 · 偏好设置)</text>
+
+  <rect x="966" y="749" width="378" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="975" y="764" font-size="9.5" fill="rgba(255,255,255,0.7)">⚙  ~/.claude/settings.json  —  用户权限规则</text>
+
+  <rect x="966" y="776" width="378" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="975" y="791" font-size="9.5" fill="rgba(255,255,255,0.7)">🧠  ~/.claude/memory/MEMORY.md  —  持久记忆 (200行/25KB)</text>
+
+  <rect x="966" y="803" width="378" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="975" y="818" font-size="9.5" fill="rgba(255,255,255,0.7)">📜  ~/.claude/projects/{hash}/sessions/{id}.jsonl  —  JSONL 会话</text>
+
+  <rect x="966" y="830" width="185" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="975" y="845" font-size="9.5" fill="rgba(255,255,255,0.7)">🛠  ~/.claude/skills/  —  技能</text>
+  <rect x="1157" y="830" width="187" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="1167" y="845" font-size="9.5" fill="rgba(255,255,255,0.7)">🤖  ~/.claude/agents/  —  代理</text>
+
+  <rect x="966" y="857" width="185" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="975" y="872" font-size="9.5" fill="rgba(255,255,255,0.7)">🏢  ~/.claude/team-memory/</text>
+  <rect x="1157" y="857" width="187" height="22" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="1167" y="872" font-size="9.5" fill="rgba(255,255,255,0.7)">🔑  Keychain / keychain.json</text>
+
+  <text x="966" y="895" font-size="9" fill="rgba(255,255,255,0.35)">.claude/settings.json (项目) · .claude/settings.local.json (本地) · .claude/.scratch/</text>
+
+  <!-- Arrows from layer3 → services / agents / storage -->
+  <line x1="310" y1="655" x2="200" y2="682" stroke="rgba(236,72,153,0.5)" stroke-width="1.5" marker-end="url(#arrowPink)" stroke-dasharray="4,3"/>
+  <line x1="540" y1="655" x2="630" y2="682" stroke="rgba(6,182,212,0.5)" stroke-width="1.5" marker-end="url(#arrowCyan)" stroke-dasharray="4,3"/>
+  <line x1="700" y1="655" x2="1050" y2="682" stroke="rgba(139,92,246,0.5)" stroke-width="1.5" marker-end="url(#arrowWhite)" stroke-dasharray="4,3"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- LAYER 5: IDE BRIDGE + COMMANDS + BUILD FLAGS -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <text x="24" y="928" font-size="10" fill="rgba(255,255,255,0.3)" font-weight="600" letter-spacing="2">LAYER 5  ·  集成 / 扩展层</text>
+
+  <!-- IDE Bridge -->
+  <rect x="50" y="936" width="260" height="110" rx="10" fill="rgba(100,116,139,0.15)" filter="url(#shadow)"/>
+  <rect x="50" y="936" width="260" height="110" rx="10" fill="none" stroke="rgba(100,116,139,0.5)" stroke-width="1.5"/>
+  <rect x="50" y="936" width="260" height="28" rx="10" fill="url(#ideGrad)"/>
+  <rect x="50" y="952" width="260" height="12" fill="url(#ideGrad)"/>
+  <text x="180" y="954" text-anchor="middle" font-size="11" font-weight="700" fill="white">🔌  IDE 桥接 (bridge/)</text>
+  <text x="180" y="970" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">VS Code · JetBrains · JWT 验证</text>
+  <text x="66" y="988" font-size="9" fill="rgba(255,255,255,0.6)">bridgeMain · bridgeMessaging</text>
+  <text x="66" y="1003" font-size="9" fill="rgba(255,255,255,0.6)">replBridge · trustedDevice</text>
+  <text x="66" y="1018" font-size="9" fill="rgba(255,255,255,0.6)">bridgePermissionCallbacks</text>
+  <text x="66" y="1033" font-size="9" fill="rgba(255,255,255,0.6)">flushGate · capacityWake</text>
+
+  <!-- Commands (55 slash commands) -->
+  <rect x="335" y="936" width="430" height="110" rx="10" fill="rgba(108,71,255,0.12)" filter="url(#shadow)"/>
+  <rect x="335" y="936" width="430" height="110" rx="10" fill="none" stroke="rgba(108,71,255,0.4)" stroke-width="1.5"/>
+  <rect x="335" y="936" width="430" height="28" rx="10" fill="rgba(108,71,255,0.5)"/>
+  <rect x="335" y="952" width="430" height="12" fill="rgba(108,71,255,0.5)"/>
+  <text x="550" y="954" text-anchor="middle" font-size="11" font-weight="700" fill="white">/ 斜杠命令系统 (55+ Commands)</text>
+  <text x="550" y="970" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">commands/ · 可通过特性标志启用/禁用</text>
+
+  <!-- Command tags -->
+  <rect x="350" y="977" width="55" height="18" rx="3" fill="rgba(108,71,255,0.3)"/>
+  <text x="378" y="990" text-anchor="middle" font-size="9" fill="white">/commit</text>
+  <rect x="411" y="977" width="50" height="18" rx="3" fill="rgba(108,71,255,0.3)"/>
+  <text x="436" y="990" text-anchor="middle" font-size="9" fill="white">/review</text>
+  <rect x="467" y="977" width="55" height="18" rx="3" fill="rgba(108,71,255,0.3)"/>
+  <text x="495" y="990" text-anchor="middle" font-size="9" fill="white">/compact</text>
+  <rect x="528" y="977" width="40" height="18" rx="3" fill="rgba(108,71,255,0.3)"/>
+  <text x="548" y="990" text-anchor="middle" font-size="9" fill="white">/mcp</text>
+  <rect x="574" y="977" width="50" height="18" rx="3" fill="rgba(108,71,255,0.3)"/>
+  <text x="599" y="990" text-anchor="middle" font-size="9" fill="white">/config</text>
+  <rect x="630" y="977" width="52" height="18" rx="3" fill="rgba(108,71,255,0.3)"/>
+  <text x="656" y="990" text-anchor="middle" font-size="9" fill="white">/doctor</text>
+  <rect x="688" y="977" width="64" height="18" rx="3" fill="rgba(108,71,255,0.3)"/>
+  <text x="720" y="990" text-anchor="middle" font-size="9" fill="white">/memory</text>
+
+  <rect x="350" y="1001" width="52" height="18" rx="3" fill="rgba(108,71,255,0.2)"/>
+  <text x="376" y="1014" text-anchor="middle" font-size="9" fill="white">/skills</text>
+  <rect x="408" y="1001" width="42" height="18" rx="3" fill="rgba(108,71,255,0.2)"/>
+  <text x="429" y="1014" text-anchor="middle" font-size="9" fill="white">/tasks</text>
+  <rect x="456" y="1001" width="38" height="18" rx="3" fill="rgba(108,71,255,0.2)"/>
+  <text x="475" y="1014" text-anchor="middle" font-size="9" fill="white">/vim</text>
+  <rect x="500" y="1001" width="40" height="18" rx="3" fill="rgba(108,71,255,0.2)"/>
+  <text x="520" y="1014" text-anchor="middle" font-size="9" fill="white">/diff</text>
+  <rect x="546" y="1001" width="44" height="18" rx="3" fill="rgba(108,71,255,0.2)"/>
+  <text x="568" y="1014" text-anchor="middle" font-size="9" fill="white">/cost</text>
+  <rect x="596" y="1001" width="50" height="18" rx="3" fill="rgba(108,71,255,0.2)"/>
+  <text x="621" y="1014" text-anchor="middle" font-size="9" fill="white">/theme</text>
+  <rect x="652" y="1001" width="100" height="18" rx="3" fill="rgba(108,71,255,0.2)"/>
+  <text x="702" y="1014" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">+40 更多命令…</text>
+
+  <text x="350" y="1036" font-size="9" fill="rgba(255,255,255,0.35)">特性标志门控: /voice · /bridge · /proactive · /workflows · /brief · /assistant</text>
+
+  <!-- Feature Flags / Build System -->
+  <rect x="790" y="936" width="560" height="110" rx="10" fill="rgba(16,185,129,0.08)" filter="url(#shadow)"/>
+  <rect x="790" y="936" width="560" height="110" rx="10" fill="none" stroke="rgba(16,185,129,0.35)" stroke-width="1.5"/>
+  <rect x="790" y="936" width="560" height="28" rx="10" fill="rgba(16,185,129,0.35)"/>
+  <rect x="790" y="952" width="560" height="12" fill="rgba(16,185,129,0.35)"/>
+  <text x="1070" y="954" text-anchor="middle" font-size="11" font-weight="700" fill="white">⚡  构建时特性标志 (Bun feature()) · 编译期死代码消除</text>
+  <text x="1070" y="970" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.55)">构建时分支 → 零运行时开销 · 实验性功能隔离</text>
+
+  <!-- Feature flag tags -->
+  <rect x="806" y="978" width="80" height="17" rx="3" fill="rgba(16,185,129,0.25)"/>
+  <text x="846" y="990" text-anchor="middle" font-size="9" fill="white">PROACTIVE</text>
+  <rect x="892" y="978" width="60" height="17" rx="3" fill="rgba(16,185,129,0.25)"/>
+  <text x="922" y="990" text-anchor="middle" font-size="9" fill="white">KAIROS</text>
+  <rect x="958" y="978" width="90" height="17" rx="3" fill="rgba(16,185,129,0.25)"/>
+  <text x="1003" y="990" text-anchor="middle" font-size="9" fill="white">BRIDGE_MODE</text>
+  <rect x="1054" y="978" width="85" height="17" rx="3" fill="rgba(16,185,129,0.25)"/>
+  <text x="1097" y="990" text-anchor="middle" font-size="9" fill="white">VOICE_MODE</text>
+  <rect x="1145" y="978" width="90" height="17" rx="3" fill="rgba(16,185,129,0.25)"/>
+  <text x="1190" y="990" text-anchor="middle" font-size="9" fill="white">COORDINATOR</text>
+  <rect x="1241" y="978" width="98" height="17" rx="3" fill="rgba(16,185,129,0.25)"/>
+  <text x="1290" y="990" text-anchor="middle" font-size="9" fill="white">TRANSCRIPT_CLF</text>
+
+  <rect x="806" y="1001" width="72" height="17" rx="3" fill="rgba(16,185,129,0.15)"/>
+  <text x="842" y="1013" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">TEAMMATE</text>
+  <rect x="884" y="1001" width="68" height="17" rx="3" fill="rgba(16,185,129,0.15)"/>
+  <text x="918" y="1013" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">TEAMMEM</text>
+  <rect x="958" y="1001" width="105" height="17" rx="3" fill="rgba(16,185,129,0.15)"/>
+  <text x="1011" y="1013" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">CONTEXT_COLLAPSE</text>
+  <rect x="1069" y="1001" width="110" height="17" rx="3" fill="rgba(16,185,129,0.15)"/>
+  <text x="1124" y="1013" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">REACTIVE_COMPACT</text>
+  <rect x="1185" y="1001" width="105" height="17" rx="3" fill="rgba(16,185,129,0.15)"/>
+  <text x="1238" y="1013" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">WORKFLOW_SCRIPTS</text>
+
+  <text x="806" y="1036" font-size="9" fill="rgba(255,255,255,0.35)">GrowthBook A/B 实验 + 实时特性标志 CDN · analytics/growthbook.ts</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- LEGEND -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="50" y="1058" width="1300" height="1" fill="rgba(255,255,255,0.08)"/>
+  <text x="60" y="1073" font-size="9" fill="rgba(255,255,255,0.3)">●  入口层 (Commander.js/Bun)    ●  查询引擎 (ask/QueryEngine)    ●  工具系统 (40+ Tools)    ●  权限系统 (DSL/Classifiers)    ●  Anthropic API (5 Providers)    ●  多代理 Swarm    ●  文件存储    ●  IDE 桥接    ●  特性标志</text>
+
+</svg>
